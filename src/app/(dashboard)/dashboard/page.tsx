@@ -6,6 +6,7 @@ import AuthRequests from "@/components/AuthRequests";
 import Modal from "@/components/Modal";
 import { FileText, Plus, Users } from "lucide-react";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 function page() {
@@ -14,6 +15,9 @@ function page() {
   const [authRequests, setAuthRequests] = useState([]);
 
   useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      redirect("/signin");
+    }
     const data = async () => {
       const res = await getPatients();
       const requests = await getcacheRequests();
@@ -75,7 +79,9 @@ function page() {
                           Authorizations
                         </dt>
                         <dd className="text-3xl font-semibold text-gray-900">
-                          {authRequests && authRequests.length > 0 ? authRequests.length : 0}
+                          {authRequests && authRequests.length > 0
+                            ? authRequests.length
+                            : 0}
                         </dd>
                       </dl>
                     </div>

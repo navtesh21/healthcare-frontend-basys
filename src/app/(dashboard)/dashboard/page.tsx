@@ -16,7 +16,7 @@ function page() {
 
   useEffect(() => {
     if (!localStorage.getItem("token")) {
-      redirect("/signin");
+      redirect("/signup");
     }
     const data = async () => {
       const res = await getPatients();

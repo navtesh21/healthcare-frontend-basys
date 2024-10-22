@@ -1,6 +1,6 @@
 import { patientSchema } from "@/app/patientCreate/page";
 
-const endpoint = process.env.apiEndpoint || `http://localhost:3001`;
+const endpoint = process.env.apiEndpoint || `https://healthcare-basys.onrender.com`;
 
 export async function userCreate(data: { email: string; password: string }) {
   console.log(data);

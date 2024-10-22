@@ -16,4 +16,6 @@ bun dev
 
 Open [http://localhost:3000/dashboard](http://localhost:3000/dashboard) with your browser to see the result.
 
-You need to start the backend repo also, as it is using port 3001 and forntend is using:http://localhost:3001 as the api endpoint, nothing else is required.
+Just use npm run dev and it should work fine, the frontend code has backend deployed endpoint api:[https://healthcare-basys.onrender.com](https://healthcare-basys.onrender.com)
+
+Frontend deployed at:[https://healthcare-frontend-basys-git-main-navtesh-s-projects.vercel.app/](https://healthcare-frontend-basys-git-main-navtesh-s-projects.vercel.app/signin)
